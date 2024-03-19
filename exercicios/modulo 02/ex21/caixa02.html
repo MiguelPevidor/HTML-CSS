@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body{
+            /* background-image: linear-gradient(to right, #008F8C,#008f8d80); */
+            background-color: rgb(157, 165, 173);
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+            
+        }
+
+        h1{
+            color: #023535;
+            font-weight: bold;
+            
+        }
+
+        #center{
+            color: white;
+            box-shadow: 0px 7px 20px   #014241ea;
+        }
+
+        header{
+            background-color: #015958;
+            padding: 10px;
+            margin: 10px;
+            
+        }
+
+        nav > a{
+            padding-right: 10px;
+            color: white
+    
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        a:hover{
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        main{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        section{
+            border: 2px solid #023535;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px 0px;
+        }
+
+        img{
+            border-radius: 0px 10px 10px 0px;
+        }
+
+        footer{
+            background-color: #015958;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        footer > p{
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        <div> é uma caixa do tipo block level.
+        <span> é uma caixa do tipo inline level.
+     -->
+
+    <header>
+        <h1 id="center">Meu Site</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <article>
+                <h1>Noticias do Brasil</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est architecto eaque ipsam, libero maxime dolorum provident, quaerat dolor ab accusamus natus, tempora perspiciatis repellendus minima voluptate magni corrupti? Mollitia, quod.</p>
+                <a href="#">Leia a notícia completa</a>
+                <aside>
+                    <a href="#" class="randomImageLink">
+                        <img class="randomImage" src="" alt="Imagem Aleatória de Notícia">
+                    </a>
+                    
+                </aside>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h1>Noticias do Mundo</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias error iusto nihil, aliquam voluptate corporis consequuntur mollitia expedita commodi ipsa laudantium corrupti quisquam minus consequatur deleniti consectetur! At, voluptatem laboriosam.</p>
+                <a href="#">Leia a notícia completa</a>
+                <aside>
+                    <a href="#" class="randomImageLink">
+                        <img class="randomImage" src="" alt="Imagem Aleatória de Notícia">
+                    </a>
+                </aside>
+            </article>
+        </section>
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        // Função para obter uma imagem aleatória da API Lorem Picsum
+        function getRandomImage() {
+            var randomImageElements = document.querySelectorAll('.randomImage');
+
+            randomImageElements.forEach(function(randomImageElement) {
+                fetch('https://picsum.photos/400/300?random')
+                    .then(response => {
+                        randomImageElement.src = response.url;
+                    })
+                    .catch(error => console.error('Erro ao obter imagem aleatória:', error));
+            });
+        }
+
+        // Chama a função ao carregar a página
+        getRandomImage();
+    </script>      
+</body>
+</html>

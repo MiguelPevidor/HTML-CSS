@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens Dinâmicas</title>
+</head>
+<body>
+    <h1>Lidando com Imagens Dinâmicas</h1>
+    <p>Através das tags picture e source podemos ter o uso de imagens flexíveis em nosso site, se adaptando com o tamanho da tela.
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem Dinâmica">
+    </picture>
+
+    <h1>Audios em HTML5</h1>
+    <p>Com a Tag audio podemos colocar audio em nosso site, e dentro dela podemos colocar alguns sources que vão servir caso algum tipo de aúdio não for compatível</p>
+
+    <h2>Preload</h2>
+    <p>O atributo preload indica se o audio sera pré carregado ou não e aceita três valores</p>
+    <ul>
+        <li><strong>metadata</strong> (O melhor caso) carrega apenas as informações sobre o arquivo(tamanho, tempo ...)</li>
+        <li><strong>none</strong> não vai carregar nada até que o usuário aperte o play</li>
+        <li><strong>auto</strong> (padrão) vai carregar o arquivo de audio inteiro assim que a pagina for carregada.</li>
+    </ul>
+    <audio preload="metadata" controls loop>
+        <source src="audio/happy-mistake.mp3" type="audio/mpeg">
+        <source src="audio/happy-mistake.ogg" type="audio/ogg">
+        <source src="audio/happy-mistake.wav" type="audio/wav">
+        <p>Seu navegador não suporta aúdio. <a href="audio/happy-mistake.mp3" download="happy-mistake.mp3">Clique aqui para fazer o dowload.</a></p>
+    </audio>
+   
+
+
+
+</body>
+</html>
