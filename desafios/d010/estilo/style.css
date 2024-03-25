@@ -114,6 +114,24 @@ div.video{
     position: relative;
 }
 
+/* div.video{
+    position: relative;
+    height: 500px;
+    padding: 20px;
+    margin-bottom: -100px;
+
+    
+    
+}
+
+div.video > iframe{
+    position: absolute;
+    left: 50%;
+    right: 50%;
+
+    transform: translate(-50%);
+}  */
+
 div.video > iframe{
     position:absolute;
     top:10%;
