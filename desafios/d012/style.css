@@ -22,6 +22,7 @@ html,body{
     min-height: 100%vh;
     background-color: darkgrey;
     font-family: var(--font1);
+    font-size: 1em;
     
 }
 
